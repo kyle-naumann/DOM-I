@@ -53,7 +53,25 @@ navLinks[3].textContent = siteContent["nav"]["nav-item-4"]
 navLinks[4].textContent = siteContent["nav"]["nav-item-5"]
 navLinks[5].textContent = siteContent["nav"]["nav-item-6"]
 
-// Top Content
+// New Content added to Nav
+
+const newContent = document.createElement("a");
+newContent.textContent = "First";
+const navPrepend = document.querySelector('nav');
+navPrepend.prepend(newContent)
+
+const newContent1 = document.createElement("a")
+newContent1.textContent = "Second"
+const navAppend = document.querySelector('nav');
+navAppend.appendChild(newContent1);
+
+// Nav links color change
+
+const navColor = document.querySelectorAll('a');
+navColor.forEach( element => {
+  element.style.color = "green"; })
+
+// Top
 
 const h1 = document.querySelector('h1');
 h1.textContent = siteContent.cta.h1
